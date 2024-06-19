@@ -24,13 +24,13 @@ def save_expenses(expenses):
         json.dump(expenses,file,indent=4)
 
 def add_expense():
-    expenses=load_expenses()
+    expenses=load_expenses() 
     while True:
         try:
             amount=float(input("Enter the amount of expense: "))
             break
         except:
-            print("Invalid amount. Please enter a valid number")
+            print("Invalid. Please Enter a Valid input")
     description= input("Enter the description of expense: ")
     category=input("Enter the category: ")
     date=datetime.datetime.now().strftime('%d-%m-%y')
